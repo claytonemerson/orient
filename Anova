@@ -1,9 +1,9 @@
 copie e cole nomeaando seus dados como por exemplo: "dados"
 
 ## Criar 2 ou mais subgrupos dentro dos dados (j1, j2, j3)
-> J1 = subset(dados, dados$idade == "j1")
-> J2 = subset(dados, dados$idade == "j2")
-> J3 = subset(dados, dados$idade == "j3")
+> J1 = subset(TCCig, TCCig$ID == "Juvenil 1")
+> J2 = subset(TCCig, TCCig$ID == "Juvenil 2")
+> J3 = subset(TCCig, TCCig$ID == "Juvenil 3")
 
 # One-way ANOVA # 
 ## testing Value against Group
@@ -13,7 +13,7 @@ aov <- aov(Value ~ Group, data)
 summary(aov)
 
 *então nos seus dados ficaria assim:
-> ov <- aov(dados$LOC ~ dados$idade, dados)
+> ov <- aov(TCCig$Ca ~ TCCig$ID, TCCig)
 > summary(ov)  # mostra o resultado
 
 ## Usando a função model.tables(), você pode olhar os resultados a nível individual.
